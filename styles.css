@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+    background: url('https://images.unsplash.com/photo-1614022717429-039324a65c04?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max') center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    font-style: oblique;
+    color: white;
+}
+h2 {
+    font-family: OpenSans-SemiBold;
+    text-align: center;
+}
+h4 {
+    font-family: OpenSans-SemiBold;
+    text-align: center;
+}
+.time-duration {
+    float: right; 
+    font-family: OpenSans-Regular; 
+    font-size: 0.9em;
+    padding: 0 1rem 0 0;
+}
+li {
+    padding: 8px 0;
+    font-family: OpenSans-SemiBold;
+    font-size: 1em;
+}
+ul {
+    padding: 0 0 0 1rem;
+}
