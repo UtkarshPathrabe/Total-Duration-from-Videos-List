@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Videos List</title>
+  <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Total duration of videos list created using JavaScript" />
@@ -244,54 +245,6 @@
       <span class='time-duration'>Duration - 04:04</span>
     </li>
   </ul>
-  <style>
-    html {
-      box-sizing: border-box;
-      background: url('https://images.unsplash.com/photo-1614022717429-039324a65c04?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max') center no-repeat;
-      background-size: cover;
-      min-height: 100vh;
-      font-style: oblique;
-      color: white;
-    }
-    h2 {
-      font-family: OpenSans-SemiBold;
-      text-align: center;
-    }
-    h4 {
-      font-family: OpenSans-SemiBold;
-      text-align: center;
-    }
-    .time-duration {
-      float: right; 
-      font-family: OpenSans-Regular; 
-      font-size: 0.9em;
-      padding: 0 1rem 0 0;
-    }
-    li {
-      padding: 8px 0;
-      font-family: OpenSans-SemiBold;
-      font-size: 1em;
-    }
-    ul {
-      padding: 0 0 0 1rem;
-    }
-  </style>
-  <script>
-    const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
-    const seconds = timeNodes
-    .map(node => node.dataset.time)
-    .map(timeCode => {
-      const [mins, secs] = timeCode.split(':').map(parseFloat);
-      return (mins * 60) + secs;
-    })
-    .reduce((total, s) => total + s, 0);
-    let secondsLeft = seconds;
-    const hours = Math.floor(secondsLeft / 3600);
-    secondsLeft = secondsLeft % 3600;
-    const minutes = Math.floor(secondsLeft / 60);
-    secondsLeft = secondsLeft % 60;
-    console.log(hours, minutes, secondsLeft);
-    document.querySelector('#total-video-duration').innerHTML = `Total Duration - ${hours} Hours ${minutes} Minutes ${secondsLeft} Seconds`;
-  </script>
+  <script src='scripts.js'></script>
 </body>
 </html>
